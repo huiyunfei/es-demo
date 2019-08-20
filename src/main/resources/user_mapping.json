@@ -1,0 +1,44 @@
+{
+	"properties": {
+		"sellName": {
+			"type": "string",
+			"analyzer": "ik_smart",
+			"search_analyzer": "ik_smart",
+			"fields": {
+				"my_pinyin": {
+					"type": "string",
+					"analyzer": "ik_pinyin_analyzer",
+					"search_analyzer": "ik_pinyin_analyzer"
+				}
+			}
+		},
+		"resumeId": {
+			"type": "long"
+		},
+		"name": {
+			"type": "keyword"
+		},
+		"genderString": {
+			"type": "keyword"
+		},
+		"bornString": {
+			"type": "keyword"
+		},
+		"bornInteger": {
+			"type": "integer"
+		},
+		"intentionPosition":{
+			"type": "object",
+			"properties": {
+				"positionId":{
+					"type":"integer"
+				},
+				"positionName":{
+					"type":"text",
+					"analyzer": "ik_max_word",
+					"search_analyzer": "ik_max_word"
+				}
+			}
+		}
+	}
+	}
